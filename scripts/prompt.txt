@@ -1,0 +1,201 @@
+You are building a daily UI project. Below is the theme specification for today.
+
+## Theme Context (daily-context.json)
+```json
+{
+  "day": 20,
+  "date": "2026-05-30",
+  "version": "1.20.0",
+  "project_name": "x-template-020",
+  "theme": {
+    "name": "Pixelated Noir",
+    "style": "Retro-futuristic, Dark Digital",
+    "mood": "gritty, electric, atmospheric, cyberpunk"
+  },
+  "palette": {
+    "background": "#100F1A",
+    "surface": "#1A192D",
+    "primary": "#00D0FF",
+    "accent": "#EE00FF",
+    "text": "#E0E0E0",
+    "muted": "#777777"
+  },
+  "typography": {
+    "heading": "Electrolize",
+    "body": "Rubik",
+    "size": "medium"
+  },
+  "layout": {
+    "structure": "grid",
+    "density": "normal",
+    "border_style": "sharp borders"
+  },
+  "animation": {
+    "level": "minimal",
+    "style": "flicker, subtle glow"
+  },
+  "components": {
+    "hero_text": "CYBER CITYSCAPE",
+    "subtitle": "Dive into a digital twilight.",
+    "button_label": "EXPLORE MATRIX",
+    "badge_text": "LIVE"
+  },
+  "commit_message": "feat: UI Day 20 — Pixelated Noir",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Checkboxes",
+    "component": "bociKond_spotty-elephant-13.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Checkboxes\\bociKond_spotty-elephant-13.html",
+    "content": "<label class=\"container\">\n  <input checked=\"checked\" type=\"checkbox\">\n  <div class=\"checkmark\"></div>\n</label>\n<style>\n/* Tags: checkbox, pulse, color */\n/* Hide the default checkbox */\n.container input {\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n}\n\n.container {\n  display: block;\n  position: relative;\n  cursor: pointer;\n  font-size: 1.5rem;\n  user-select: none;\n}\n\n/* Create a custom checkbox */\n.checkmark {\n  --clr: #0B6E4F;\n  position: relative;\n  top: 0;\n  left: 0;\n  height: 1.3em;\n  width: 1.3em;\n  background-color: #ccc;\n  border-radius: 50%;\n  transition: 300ms;\n}\n\n/* When the checkbox is checked, add a blue background */\n.container input:checked ~ .checkmark {\n  background-color: var(--clr);\n  border-radius: .5rem;\n  animation: pulse 500ms ease-in-out;\n}\n\n/* Create the checkmark/indicator (hidden when not checked) */\n.checkmark:after {\n  content: \"\";\n  position: absolute;\n  display: none;\n}\n\n/* Show the checkmark when checked */\n.container input:checked ~ .checkmark:after {\n  display: block;\n}\n\n/* Style the checkmark/indicator */\n.container .checkmark:after {\n  left: 0.45em;\n  top: 0.25em;\n  width: 0.25em;\n  height: 0.5em;\n  border: solid #E0E0E2;\n  border-width: 0 0.15em 0.15em 0;\n  transform: rotate(45deg);\n}\n\n@keyframes pulse {\n  0% {\n    box-shadow: 0 0 0 #0B6E4F90;\n    rotate: 20deg;\n  }\n\n  50% {\n    rotate: -20deg;\n  }\n\n  75% {\n    box-shadow: 0 0 0 10px #0B6E4F60;\n  }\n\n  100% {\n    box-shadow: 0 0 0 13px #0B6E4F30;\n    rotate: 0;\n  }\n}\n</style>"
+  }
+}
+```
+
+## Selected Component Reference
+- Category: Checkboxes
+- Component: bociKond_spotty-elephant-13.html
+- Path: C:\Users\User\Documents\GitHub\Axon\x-components\Checkboxes\bociKond_spotty-elephant-13.html
+
+Use the selected component HTML below as the primary design reference for the new UI. Keep the structure and styling assumptions in mind while rewriting the requested files.
+```html
+<label class="container">
+  <input checked="checked" type="checkbox">
+  <div class="checkmark"></div>
+</label>
+<style>
+/* Tags: checkbox, pulse, color */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  --clr: #0B6E4F;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--clr);
+  border-radius: .5rem;
+  animation: pulse 500ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #E0E0E2;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #0B6E4F90;
+    rotate: 20deg;
+  }
+
+  50% {
+    rotate: -20deg;
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px #0B6E4F60;
+  }
+
+  100% {
+    box-shadow: 0 0 0 13px #0B6E4F30;
+    rotate: 0;
+  }
+}
+</style>
+```
+
+## Your Task
+Completely redesign the UI by rewriting these three files from scratch:
+- `src/App.tsx`
+- `src/App.css`
+- `src/index.css`
+
+## Rules for App.tsx
+1. Keep ALL existing imports:
+   - `import { useState, useEffect, useRef } from 'react'`
+   - `import reactLogo from './assets/react.svg'`
+   - `import viteLogo from './assets/vite.svg'`
+   - `import heroImg from './assets/hero.png'`
+   - `import './App.css'`
+2. Keep the `CounterNum` component (useRef + useEffect animation)
+3. Keep the counter button with `onClick` / `setCount` handler
+4. Keep the Documentation section (Vite/React links)
+5. Keep the Social section (GitHub/Discord/X/Bluesky links + SVG icons)
+6. Do NOT use CSS custom properties (`--var-name`) in inline `style` attributes — TypeScript will error
+
+## Rules for CSS
+- Apply the palette, typography, layout structure, animation level, and component text from the JSON above
+- Use Google Fonts via `@import` in `index.css`
+- Match the theme mood: gritty, electric, atmospheric, cyberpunk
+
+## Mandatory Requirements (apply to every build)
+
+### 1. Responsive — Mobile First
+- Design for mobile (320px) first, scale up with `min-width` breakpoints
+- Touch targets minimum 44×44px
+- No horizontal scroll on any screen size
+- Fluid typography: use `clamp()` or responsive units (`rem`, `%`, `vw`)
+- Images and layout must reflow gracefully at 320px, 768px, 1280px
+
+### 2. Footer Copyright
+- The page MUST have a `<footer>` at the bottom
+- Footer text: `© 2026 Microtronic. All rights reserved.`
+- Style the footer to match the theme palette (muted text on surface background)
+
+### 3. SEO Standards
+- `index.html` must have a descriptive `<title>`: `CYBER CITYSCAPE — Pixelated Noir | Microtronic`
+- Add `<meta name="description">` with the subtitle: `Dive into a digital twilight.`
+- Add `<meta name="keywords">` relevant to the theme
+- Add Open Graph tags: `og:title`, `og:description`, `og:type` (website)
+- All images must have meaningful `alt` attributes
+- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`, `<nav>` where appropriate
+- Heading hierarchy: one `<h1>` (hero), `<h2>` for sections — no skipping levels
+
+## After saving all files
+1. Update `version` in `package.json` to `1.20.0`
+2. Update `<title>` and meta tags in `index.html` as specified above
+3. Run: `pnpm build`
+4. If build succeeds → write `done` to `scripts/build-done.flag`
+5. If build fails with TypeScript errors → fix them and rebuild

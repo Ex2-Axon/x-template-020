@@ -1,0 +1,47 @@
+{
+  "day": 20,
+  "date": "2026-05-30",
+  "version": "1.20.0",
+  "project_name": "x-template-020",
+  "theme": {
+    "name": "Pixelated Noir",
+    "style": "Retro-futuristic, Dark Digital",
+    "mood": "gritty, electric, atmospheric, cyberpunk"
+  },
+  "palette": {
+    "background": "#100F1A",
+    "surface": "#1A192D",
+    "primary": "#00D0FF",
+    "accent": "#EE00FF",
+    "text": "#E0E0E0",
+    "muted": "#777777"
+  },
+  "typography": {
+    "heading": "Electrolize",
+    "body": "Rubik",
+    "size": "medium"
+  },
+  "layout": {
+    "structure": "grid",
+    "density": "normal",
+    "border_style": "sharp borders"
+  },
+  "animation": {
+    "level": "minimal",
+    "style": "flicker, subtle glow"
+  },
+  "components": {
+    "hero_text": "CYBER CITYSCAPE",
+    "subtitle": "Dive into a digital twilight.",
+    "button_label": "EXPLORE MATRIX",
+    "badge_text": "LIVE"
+  },
+  "commit_message": "feat: UI Day 20 — Pixelated Noir",
+  "source": "gemini-key1",
+  "selected_component": {
+    "category": "Cards",
+    "component": "Admin12121_average-parrot-89.html",
+    "path": "C:\\Users\\User\\Documents\\GitHub\\Axon\\x-components\\Cards\\Admin12121_average-parrot-89.html",
+    "content": "<div class=\"main\">\n<div class=\"card\">\n  <div class=\"card-content\">\n    <div class=\"h3\"><span>UI</span>VERSE</div>\n    <div class=\"h1\">Love to Code.</div>\n    <p class=\"p\">Love to spend hours in codeing and get lost in own fantasy world of code, the feeling 😂🚀😊 </p>\n  </div>\n</div>\n</div>\n<style>\n/* Tags: card, cardhover , card animation */\n.h3 span {\n  font-weight: 800;\n  background: linear-gradient(125deg, #b663ff, #13c1ef);\n  text-transform: uppercase;\n  -webkit-background-cLip: text;\n  -webkit-text-filL-coLor: transparent;\n}\n\n.h3::after {\n  content: '';\n  margin-top: -5px;\n  height: 3px;\n  width: 25%;\n  background: linear-gradient(125deg, #b663ff, #13c1ef);\n  display: block;\n}\n\n.main {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.card {\n  width: 80%;\n  position: relative;\n  background-color: rgb(16 16 16);\n  border: 1px solid rgb(255 255 255 / 5%);\n  border-radius: 1.5rem;\n  padding: 1rem;\n}\n\n.card:after {\n  content: \"\";\n  height: 70px;\n  width: 1px;\n  position: absolute;\n  left: -1px;\n  top: 65%;\n  transition: top, opacity;\n  transition-duration: 600ms;\n  transition-timing-function: ease;\n  background: linear-gradient(transparent, mediumslateblue,transparent);\n  box-shadow: 0 0 30px mediumslateblue;\n  opacity: 0;\n}\n\n.card:after {\n  top: 65%;\n  opacity: 0;\n}\n\n.card:hover:after {\n  top: 25%;\n  opacity: 1;\n}\n\n.card-content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-image: radial-gradient(\n    rgba(255, 255, 255, 0.1) 1px, \n    transparent 1px\n  );\n  background-position: 50% 50%;\n  background-size: 1.1rem 1.1rem;\n  padding: 2.3rem;\n  border-radius: 1.25rem;\n  overflow: hidden;\n}\n\n.card-content .h1,.h3,.p {\n  text-align: center;\n}\n\n.card-content .h1 {\n  color: rgb(250 249 246);\n  font-size: 2.6rem;\n}\n\n.card-content  .h3 {\n  color: #fff;\n  text-transform: uppercase;\n  font-size: 1.5rem;\n}\n\n.card-content  .p {\n  color: rgb(255 255 255 / 75%);\n  line-height: 1.3rem;\n}\n\n@media(max-width: 700px) {\n  .card {\n    width: calc(100% - 2rem);\n    margin: 0rem 1rem;\n    padding: 0.75rem;\n    border-radius: 1rem;\n  }\n}\n\n@media(max-width: 600px) {\n  .card-content {\n    padding: 3rem;\n  }\n\n  .card-content  .h1 {\n    font-size: 2.2rem;\n  }\n}\n\n</style>"
+  }
+}

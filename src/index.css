@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rubik:wght@300;400;500;700&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #100F1A;
+  --color-surface: #1A192D;
+  --color-primary: #00D0FF;
+  --color-accent: #EE00FF;
+  --color-text-main: #E0E0E0;
+  --color-muted: #777777;
+
+  --font-heading: 'Electrolize', sans-serif;
+  --font-body: 'Rubik', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+
+  --animate-flicker: flicker 2s infinite;
+  --animate-glitch: glitch 1s infinite;
+  --animate-scanline: scanline 8s linear infinite;
+
+  @keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% { opacity: 1; }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% { opacity: 0.4; }
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+}
+
+:root {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Pixel Grid Overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── CRT Scanline Effect ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 51%,
+    transparent 52%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 30;
+}
+
+/* ── Glow Classes ── */
+.glow-primary {
+  text-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary);
+}
+
+.glow-accent {
+  text-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent);
+}
+
+.border-glow-primary {
+  box-shadow: 0 0 10px var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.border-glow-accent {
+  box-shadow: 0 0 10px var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
